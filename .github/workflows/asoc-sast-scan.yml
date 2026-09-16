@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@a37ce9120846195fa4ece8f58b268e6043cb2f26
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
           
@@ -23,7 +23,7 @@ jobs:
         
       - name: Run AppScan SAST scan
         id: appscan
-        uses: HCL-TECH-SOFTWARE/appscan-sast-action@3a5086302da64187c4747ca0ef68518f92064c43
+        uses: HCL-TECH-SOFTWARE/appscan-sast-action@main
         with:
           asoc_key: ${{ secrets.ASOC_KEY }}
           asoc_secret: ${{ secrets.ASOC_SECRET }}
